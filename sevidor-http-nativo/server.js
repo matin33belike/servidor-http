@@ -12,8 +12,8 @@ server.on('request', (req, res) => {
     
 
     res.statusCode = 201
-    res.setHeader('Content-type', 'text/plain', 'charset: utf-8');
-    res.end("Recurso criado")
+    res.setHeader('Content-type', 'application/json', 'charset: utf-8');
+    res.end(JSON.stringify({"status":"ok"}))
 });
 
 server.listen(porta, () => {
