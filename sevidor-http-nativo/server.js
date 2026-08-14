@@ -9,6 +9,8 @@ const requisicao = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.statusCode = 200
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
+    console.log(`requisição recebida ${req.method} ${req.url}`);
+    
 
     if (req.method === 'GET' && urlObj.pathname === '/saudacao') {
         const nome = urlObj.searchParams.get('nome');
